@@ -90,4 +90,87 @@
     min-height: 100vh;
     display: flex;
     align-items: stretch;
+}
+
+/* Schedule page styles */
+.calendar-container {
+    margin: 2em 0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    background: #fff;
+    height: 80vh;
+    min-height: 600px;
+    position: relative;
+}
+
+.schedule-info {
+    background: #f8f9fa;
+    padding: 1.5em;
+    border-radius: 8px;
+    margin: 2em 0;
+    border-left: 4px solid #007bff;
+}
+
+.schedule-info p {
+    margin: 0.5em 0;
+}
+
+.schedule-info a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.schedule-info a:hover {
+    text-decoration: underline;
+}
+
+.schedule-instructions {
+    background: #f8f9fa;
+    padding: 1.5em;
+    border-radius: 8px;
+    margin: 2em 0;
+    border-left: 4px solid #28a745;
+}
+
+.schedule-instructions h3 {
+    color: #28a745;
+    margin-top: 0;
+}
+
+.office-hours {
+    background: #fff3cd;
+    padding: 1.5em;
+    border-radius: 8px;
+    margin: 2em 0;
+    border-left: 4px solid #ffc107;
+}
+
+.office-hours h3 {
+    color: #856404;
+    margin-top: 0;
+}
+
+/* Calendar iframe styles */
+.calendar-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 8px;
+}
+
+/* Responsive calendar */
+@media screen and (max-width: 768px) {
+    .calendar-container {
+        height: 70vh;
+        min-height: 500px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .calendar-container {
+        height: 60vh;
+        min-height: 400px;
+    }
 } 
