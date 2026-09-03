@@ -26,6 +26,11 @@
 		<link rel="stylesheet" href="assets/css/custom.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<link rel="icon" href="images/Formalpic.png" type="image/x-icon">
+		<link rel="apple-touch-icon" href="images/Formalpic.png">
+		<!-- Apply saved / system theme + enable JS-gated reveal, before paint -->
+		<script>
+			(function(){var e=document.documentElement;e.className+=' js';try{var t=localStorage.getItem('theme');if(!t){t=(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light';}e.setAttribute('data-theme',t);}catch(x){}})();
+		</script>
 	</head>
 	<!-- Google tag (gtag.js) -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-0R42464Z04"></script>
@@ -48,6 +53,9 @@
 						<li><a href="personal.html">Personal</a></li>
 						<li><a href="schedule.html">Schedule</a></li>
 					</ul>
+					<button type="button" class="theme-toggle" aria-label="Switch to dark mode" aria-pressed="false" title="Toggle dark mode">
+						<span class="icon-moon" aria-hidden="true">🌙</span><span class="icon-sun" aria-hidden="true">☀️</span>
+					</button>
 				</nav>
 
 				<!-- One -->
@@ -64,6 +72,11 @@
 								<li><a href="mailto:arshia.ilaty99@gmail.com" class="icon style2 fa-envelope"><span class="label">Gmail</span></a></li>
 								<li><a href="https://www.instagram.com/arshia_ilaty/" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
 								<li><a href="https://scholar.google.com/citations?user=IsR-aEMAAAAJ&hl=en" class="icon brands style2 fa-google"><span class="label">Google Scholar</span></a></li>
+							</ul>
+							<ul class="hero-highlights">
+								<li>Joint Ph.D. · UCI + SDSU</li>
+								<li>Ex-Tesla &amp; World Mobile</li>
+								<li>LLMs · Health AI · Federated Learning</li>
 							</ul>
 <!-- 							<ul class="actions stacked">
 								<li><a href="#first" class="button big wide smooth-scroll-middle">More About Me</a></li>
@@ -95,7 +108,7 @@
 					<!-- Tab panel: Overview -->
 					<div id="tab-overview" class="tab-panel active" role="tabpanel">
 					<!-- Education List -->
-					<section>
+					<section data-reveal>
 						<header>
 							<h3>Education</h3>
 						</header>
@@ -145,7 +158,7 @@
 
 
 					<!-- Work Experience -->
-					<section>
+					<section data-reveal>
 						<header>
 							<h3>Work Experience</h3>
 						</header>
@@ -202,21 +215,34 @@
 					</section>
 
 					<!-- Skills -->
-					<section>
+					<section data-reveal>
 						<header>
 							<h3>Skills</h3>
 						</header>
 						<div class="content">
-							<ul>
-								<li><strong>Programming Languages:</strong> Python, C/C++, Flutter (Dart), Java, Go, HTML + CSS, SQL</li>
-								<li><strong>Tools:</strong> Git, Github, Weka, RapidMiner, Webflow, Redis, MongoDB, SQL Server, MySQL, Hive, Airflow, Docker, Kubernetes, NGINX, Load Balancers, Tableau, Power BI, Pandas, Matplotlib, NumPy, Scrapy and BeautifulSoup, Scapy, SciPy, Scikit-Learn, TensorFlow, PyTorch, Hadoop, Spark, Kafka, Bazel, Buck, Superset, Pig, Iceberg, OpenNLP, NiFi,  SQLAlchemy, Google Tag/AB Testing</li>
-								<li><strong>Cloud:</strong> AWS (S3, EC2, RDS, DynamoDB, CloudFront), Azure, GCP</li>
-							</ul>
+							<div class="skill-group">
+								<h4>Programming Languages</h4>
+								<ul class="chips">
+									<li>Python</li><li>C/C++</li><li>Flutter (Dart)</li><li>Java</li><li>Go</li><li>HTML + CSS</li><li>SQL</li>
+								</ul>
+							</div>
+							<div class="skill-group">
+								<h4>Tools &amp; Frameworks</h4>
+								<ul class="chips">
+									<li>Git</li><li>GitHub</li><li>Weka</li><li>RapidMiner</li><li>Webflow</li><li>Redis</li><li>MongoDB</li><li>SQL Server</li><li>MySQL</li><li>Hive</li><li>Airflow</li><li>Docker</li><li>Kubernetes</li><li>NGINX</li><li>Load Balancers</li><li>Tableau</li><li>Power BI</li><li>Pandas</li><li>Matplotlib</li><li>NumPy</li><li>Scrapy</li><li>BeautifulSoup</li><li>Scapy</li><li>SciPy</li><li>Scikit-Learn</li><li>TensorFlow</li><li>PyTorch</li><li>Hadoop</li><li>Spark</li><li>Kafka</li><li>Bazel</li><li>Buck</li><li>Superset</li><li>Pig</li><li>Iceberg</li><li>OpenNLP</li><li>NiFi</li><li>SQLAlchemy</li><li>Google Tag / A-B Testing</li>
+								</ul>
+							</div>
+							<div class="skill-group">
+								<h4>Cloud</h4>
+								<ul class="chips">
+									<li>AWS (S3, EC2, RDS, DynamoDB, CloudFront)</li><li>Azure</li><li>GCP</li>
+								</ul>
+							</div>
 						</div>
 					</section>
 
 					<!-- Affiliation -->
-					<section>
+					<section data-reveal>
 						<header>
 							<h3>Affiliation</h3>
 						</header>
@@ -234,7 +260,7 @@
 
 					<!-- Tab panel: Research -->
 					<div id="tab-research" class="tab-panel" role="tabpanel" hidden>
-					<section>
+					<section data-reveal>
 						<header>
 							<h3>Papers</h3>
 						</header>
@@ -255,42 +281,49 @@
 							-->
 							<ol class="papers-list">
 								<li class="paper">
+									<span class="pub-badge pub-badge--arxiv">arXiv</span>
 									<span class="paper-title">A Knowledge-Guided Agentic Framework for Mitigating Patient-Context Ambiguity in Health Queries</span>
 									<span class="paper-authors">M. Abbasian, S. A. Farahani, <strong>A. Ilaty</strong>, H. Cao, R. Jain, A. M. Rahmani</span>
 									<span class="paper-venue">arXiv preprint, 2026</span>
 									<span class="paper-links"><a href="https://arxiv.org/abs/2608.19875" target="_blank" rel="noopener">arXiv:2608.19875</a></span>
 								</li>
 								<li class="paper">
+									<span class="pub-badge pub-badge--arxiv">arXiv</span>
 									<span class="paper-title">PSyGenTAB: A Privacy-Preserving Framework for Synthetic Clinical Tabular Data Generation via Constrained Optimization</span>
 									<span class="paper-authors"><strong>A. Ilaty</strong>, H. Shirazi, M. Chitale, K. Hegde, D. Ramesh, R. S. Manjunath, et al.</span>
 									<span class="paper-venue">arXiv preprint, 2026</span>
 									<span class="paper-links"><a href="https://arxiv.org/abs/2606.18518" target="_blank" rel="noopener">arXiv:2606.18518</a></span>
 								</li>
 								<li class="paper">
+									<span class="pub-badge pub-badge--arxiv">arXiv</span>
 									<span class="paper-title">Personal Care Utility: Health as Everyday Infrastructure</span>
 									<span class="paper-authors">M. Abbasian, E. Khatibi, S. A. Farahani, N. Nagesh, <strong>A. Ilaty</strong>, H. Sajjadi, et al.</span>
 									<span class="paper-venue">arXiv preprint, 2026</span>
 									<span class="paper-links"><a href="https://arxiv.org/abs/2606.14145" target="_blank" rel="noopener">arXiv:2606.14145</a></span>
 								</li>
 								<li class="paper">
+									<span class="pub-badge pub-badge--arxiv">arXiv</span>
 									<span class="paper-title">DISCO-TAB: A Hierarchical Reinforcement Learning Framework for Privacy-Preserving Synthesis of Complex Clinical Data</span>
 									<span class="paper-authors"><strong>A. Ilaty</strong>, H. Shirazi, A. Rahmani, H. Homayouni</span>
 									<span class="paper-venue">arXiv preprint, 2026</span>
 									<span class="paper-links"><a href="https://arxiv.org/abs/2604.01481" target="_blank" rel="noopener">arXiv:2604.01481</a></span>
 								</li>
 								<li class="paper">
+									<span class="pub-badge pub-badge--aacr">AACR 2026</span>
 									<span class="paper-title">Integrating Real-World Wearable Data into Breast Cancer Risk Assessment: Evidence from the All of Us Research Program</span>
 									<span class="paper-authors">Y. Weber, <strong>A. Ilaty</strong>, X. Kuang, E. L. Nguyen, A. Plaza-Florido, S. Radom-Aizik, et al.</span>
 									<span class="paper-venue">Cancer Research 86 (7_Supplement), 5031 &mdash; AACR Annual Meeting 2026</span>
 									<span class="paper-links"><a href="https://www.aacr.org/meeting/aacr-annual-meeting-2026/" target="_blank" rel="noopener">Meeting page</a></span>
 								</li>
 								<li class="paper">
+									<span class="pub-badge pub-badge--jmir">JMIR</span>
 									<span class="paper-title">Predicting Clinician- and Patient-Assessed Pain Intensity from Wrist-Worn Physiological Signals in Chronic Spine Pain Patients: A Multi-Rater Machine Learning Study</span>
 									<span class="paper-authors">T. D. Hughes, <strong>A. Ilaty</strong>, S. A. Farahani, A. M. Nelson, A. Rahmani</span>
 									<span class="paper-venue">JMIR Preprints, 2026</span>
 									<span class="paper-links"><a href="https://preprints.jmir.org/preprint/103289" target="_blank" rel="noopener">JMIR preprint</a></span>
 								</li>
 								<li class="paper">
+									<span class="pub-badge pub-badge--neurips">NeurIPS 2025</span>
 									<span class="paper-title">SynLLM: A Comparative Analysis of Large Language Models for Medical Tabular Synthetic Data Generation via Prompt Engineering</span>
 									<span class="paper-authors"><strong>A. Ilaty</strong>, H. Shirazi, H. Homayouni</span>
 									<span class="paper-venue">NeurIPS 2025</span>
@@ -300,6 +333,7 @@
 									</div>
 								</li>
 								<li class="paper">
+									<span class="pub-badge pub-badge--zenodo">Zenodo</span>
 									<span class="paper-title">User Manual for MOLE: Mimetic Operators Library Enhanced, a High-Order Mimetic Differential Operators Library for Solving Partial Differential Equations (PDEs)</span>
 									<span class="paper-authors">V. Barra, A. Boada, J. Brzenski, J. Castillo, P. Chakalasiya, S. Chhabra Singh, et al.</span>
 									<span class="paper-venue">Zenodo</span>
@@ -313,7 +347,7 @@
 						</div>
 					</section>
 
-					<section>
+					<section data-reveal>
 						<header>
 							<h3>Research Experience</h3>
 						</header>
@@ -344,7 +378,7 @@
 					</section>
 
 					<!-- Notable Projects -->
-					<section>
+					<section data-reveal>
 						<header>
 							<h3>Notable Projects</h3>
 						</header>
@@ -390,7 +424,7 @@
 					</section>
 
 					<!-- Open-Source Contribution -->
-					<section>
+					<section data-reveal>
 						<header>
 							<h3>Open-Source Contribution</h3>
 						</header>
@@ -409,7 +443,7 @@
 
 					<!-- Tab panel: Teaching -->
 					<div id="tab-teaching" class="tab-panel" role="tabpanel" hidden>
-					<section>
+					<section data-reveal>
 						<header>
 							<h3>Teaching Experience</h3>
 						</header>
@@ -446,7 +480,7 @@
 
 					<!-- Tab panel: Entrepreneurship -->
 					<div id="tab-entrepreneurship" class="tab-panel" role="tabpanel" hidden>
-					<section>
+					<section data-reveal>
 						<header>
 							<h3>Entrepreneurship Experience</h3>
 						</header>
@@ -512,7 +546,7 @@
 					<!-- Tab panel: Services & Awards -->
 					<div id="tab-services-awards" class="tab-panel" role="tabpanel" hidden>
 					<!-- Services -->
-					<section>
+					<section data-reveal>
 						<header>
 							<h3>Services</h3>
 						</header>
@@ -537,7 +571,7 @@
 					</section>
 
 					<!-- Honors -->
-					<section>
+					<section data-reveal>
 						<header>
 							<h3>Honors and Awards</h3>
 						</header>
@@ -572,7 +606,7 @@
 					</section>
 
 					<!-- Certificates -->
-					<section>
+					<section data-reveal>
 						<header>
 							<h3>Certificates</h3>
 						</header>
@@ -602,7 +636,7 @@
 					</section>
 
 					<!-- Activities and Societies -->
-					<section>
+					<section data-reveal>
 						<header>
 							<h3>Activities and Societies</h3>
 						</header>
@@ -649,6 +683,7 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="assets/js/custom.js"></script>
 			<script>
 				(function() {
 					var tabBtns = document.querySelectorAll('.tab-btn');

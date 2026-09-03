@@ -14,6 +14,11 @@
 		<link rel="stylesheet" href="assets/css/custom.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<link rel="icon" href="images/Formalpic.png" type="image/x-icon">
+		<link rel="apple-touch-icon" href="images/Formalpic.png">
+		<!-- Apply saved / system theme + enable JS-gated reveal, before paint -->
+		<script>
+			(function(){var e=document.documentElement;e.className+=' js';try{var t=localStorage.getItem('theme');if(!t){t=(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light';}e.setAttribute('data-theme',t);}catch(x){}})();
+		</script>
 	</head>
 	<!-- Google tag (gtag.js) -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-0R42464Z04"></script>
@@ -35,6 +40,9 @@
 					<li><a href="personal.html" class="active">Personal</a></li>
 					<li><a href="schedule.html">Schedule</a></li>
 				</ul>
+				<button type="button" class="theme-toggle" aria-label="Switch to dark mode" aria-pressed="false" title="Toggle dark mode">
+					<span class="icon-moon" aria-hidden="true">🌙</span><span class="icon-sun" aria-hidden="true">☀️</span>
+				</button>
 			</nav>
 
 			<!-- Main -->
@@ -58,19 +66,19 @@
 					</ul>
 
 					<h3>Tennis</h3>
-					<div class="photo-grid photo-grid--hobbies">
+					<div class="photo-grid photo-grid--hobbies" data-reveal>
 						<img src="images/tennis.JPG" alt="Playing tennis" loading="lazy" />
 						<img src="images/tennis2.jpg" alt="Tennis match" loading="lazy" />
 					</div>
 
 					<h3>Soccer &amp; Mountaineering</h3>
-					<div class="photo-grid photo-grid--hobbies">
+					<div class="photo-grid photo-grid--hobbies" data-reveal>
 						<img src="images/soccer.jpg" alt="Playing soccer" loading="lazy" />
 						<img src="images/Soccer-Mountain.png" alt="Mountaineering and outdoor adventures" loading="lazy" />
 					</div>
 
 					<h3>CrossFit, Spinning &amp; Running</h3>
-					<div class="photo-grid photo-grid--hobbies">
+					<div class="photo-grid photo-grid--hobbies" data-reveal>
 						<img src="images/crossfit.jpg" alt="CrossFit training" loading="lazy" />
 						<img src="images/spinning.jpg" alt="Indoor cycling and spinning" loading="lazy" />
 						<img src="images/Running/DSC04040.jpg" alt="Trail running" loading="lazy" />
@@ -83,7 +91,7 @@
 					<h2>Personal Philosophy</h2>
 					<p>I believe in continuous learning, not just in academics but in all aspects of life. My experiences across different cultures and environments have taught me the importance of adaptability, resilience, and maintaining an open mind.</p>
 
-					<div class="gallery">
+					<div class="gallery" data-reveal>
 						<img src="images/map.png" alt="Urmia map" />
 						<img src="images/city.jpeg" alt="Urmia city" />
 						<img src="images/location.jpeg" alt="Urmia location" />
@@ -91,7 +99,7 @@
 
 					<h2>Childhood Memories</h2>
 					<p>A few snapshots from growing up in Urmia and the years that shaped who I am today.</p>
-					<div class="photo-grid photo-grid--childhood">
+					<div class="photo-grid photo-grid--childhood" data-reveal>
 						<img src="images/ChildHood/karisma.jpg" alt="Childhood in Urmia" loading="lazy" />
 						<img src="images/ChildHood/BabaCesar.jpg" alt="Family childhood photo" loading="lazy" />
 						<img src="images/ChildHood/Summer1378.jpg" alt="Summer in Urmia" loading="lazy" />
@@ -115,6 +123,7 @@
 		<script src="assets/js/breakpoints.min.js"></script>
 		<script src="assets/js/util.js"></script>
 		<script src="assets/js/main.js"></script>
+		<script src="assets/js/custom.js"></script>
 
 	</body>
 </html> 

@@ -15,6 +15,11 @@
 		<link rel="stylesheet" href="assets/css/custom.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<link rel="icon" href="images/Formalpic.png" type="image/x-icon">
+		<link rel="apple-touch-icon" href="images/Formalpic.png">
+		<!-- Apply saved / system theme + enable JS-gated reveal, before paint -->
+		<script>
+			(function(){var e=document.documentElement;e.className+=' js';try{var t=localStorage.getItem('theme');if(!t){t=(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light';}e.setAttribute('data-theme',t);}catch(x){}})();
+		</script>
 	</head>
 	<!-- Google tag (gtag.js) -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-0R42464Z04"></script>
@@ -37,6 +42,9 @@
 						<li><a href="personal.html">Personal</a></li>
 						<li><a href="schedule.html" class="active">Schedule</a></li>
 					</ul>
+					<button type="button" class="theme-toggle" aria-label="Switch to dark mode" aria-pressed="false" title="Toggle dark mode">
+						<span class="icon-moon" aria-hidden="true">🌙</span><span class="icon-sun" aria-hidden="true">☀️</span>
+					</button>
 				</nav>
 
 				<!-- Schedule Section -->
@@ -82,6 +90,7 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="assets/js/custom.js"></script>
 
 	</body>
 </html>
