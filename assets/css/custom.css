@@ -237,6 +237,40 @@
     color: #666;
 }
 
+.pubs-note {
+    margin-bottom: 1.25em;
+    color: #555;
+    font-size: 0.95em;
+}
+
+.paper .paper-title {
+    display: block;
+    font-weight: 600;
+    color: #222;
+    line-height: 1.5;
+}
+
+.paper .paper-authors,
+.paper .paper-venue,
+.paper .paper-links {
+    display: block;
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 0.15em;
+}
+
+.paper .paper-venue {
+    font-style: italic;
+}
+
+.paper .paper-authors strong {
+    color: #222;
+}
+
+.paper .paper-links a {
+    font-weight: 600;
+}
+
 /* Startup preview cards */
 .startup-cards {
     display: grid;

@@ -3,3 +3,12 @@
 .autopilot.json
 .cursorindexingignore
 tmp/
+
+# OS / editor cruft
+.DS_Store
+**/.DS_Store
+*.swp
+
+# macOS image formats browsers cannot render
+*.HEIC
+*.heic
